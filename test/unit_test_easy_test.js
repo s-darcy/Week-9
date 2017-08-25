@@ -11,8 +11,16 @@ describe('multipliedIntegers', function(){
     it('returns the two integers multiplied together', function(){
         expect(integers(2,3)).to.be.equal(6);   
    });
-    it('', function(){
-        expect(integers % 1).to.be.equal(0);
+    it('return false if invalid parameters passed', function(){
+        expect(0).to.not.be.false;
+        expect(6).to.not.be.false;
+        expect(-1 % 2).to.not.be.false;
+        expect(NaN % 2).to.not.be.false;
+        expect(5.5 % 2).to.not.be.false;
+        expect(null).to.be.null;
+        expect(null).to.not.be.undefined;
+        expect(undefined).to.be.undefined;
+        expect(undefined).not.to.be.null;
     });
 });
 

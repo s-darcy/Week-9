@@ -7,6 +7,6 @@ function integers (a, b) {
    return Math.floor( a * b );
 };
 
-console.log(integers);
+console.log(integers(6, 3));
 
 module.exports.integers = integers;
