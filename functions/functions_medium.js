@@ -9,10 +9,5 @@ function thing (str, singleCharacter) {
     thing.singleCharacter = 'a';
 };
 
-
-
 module.exports.thing = thing;
 
-//var newObject = {str: "green", singleCharacter:"r"};
-//
-//console.log(newObject);

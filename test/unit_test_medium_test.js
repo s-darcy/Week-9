@@ -11,14 +11,18 @@ describe('object parameter with two properties', function(){
     var thing = require('../functions/functions_medium.js');
     
     var newObject = Object.create(thing);
-    newObject.str = 'green';
-    newObject.singleCharacter = 'n';
-    newObject.str.indexOf("n");
-    
+        newObject.str = 'green';
+        newObject.singleCharacter = 'n';
+
     it('returns first instance where this character is found in the string', function(){
         expect(newObject.str).to.include(newObject.singleCharacter);
         expect(newObject.str).to.not.include('y');
         expect(newObject.str.indexOf('n')).to.equal(4);
         expect(newObject.str.indexOf('n')).to.not.equal(5);
+    });
+    
+    it('returns false if character not found', function(){
+        expect(newObject.str.includes('y')).to.be.false; 
+        expect(newObject.str.includes('r')).to.be.true; 
     });
 });
