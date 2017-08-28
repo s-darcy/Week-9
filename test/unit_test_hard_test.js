@@ -3,28 +3,7 @@
 //• Write a test that will verify that the function returns an object with 5 people with their ages modified correctly.
 //• Write a test that will verify that the function returns false if an invalid parameter is passed in.
 //• Write a function that will make these tests succeed.
-//Example Parameter --
-//{
-//    Chris: {
-//        Age: ’26’,
-//        Location: ‘Charlotte',
-//    },
-//    Jonathan: {
-//        Age: ’32’,
-//        Location: ‘Atlanta’,
-//    },
-//}
-//Example Returned Object —
-//{
-//    Chris: {
-//        Age: ’31’,
-//        Location: ‘Charlotte',
-//    },
-//    Jonathan: {
-//        Age: ’37’,
-//        Location: ‘Atlanta’,
-//    },
-//}
+
 
 
 var expect = require('chai').expect;

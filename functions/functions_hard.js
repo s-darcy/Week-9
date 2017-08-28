@@ -4,28 +4,10 @@
 //• Write a test that will verify that the function returns false if an invalid parameter is passed in.
 //• Write a function that will make these tests succeed.
 
-//
-//var triangle = {a: 1, b: 2, c: 3};
-//
-//function ColoredTriangle() {
-//  this.color = 'red';
-//}
-//
-//ColoredTriangle.prototype = triangle;
-//
-//var obj = new ColoredTriangle();
-//
-//for (var prop in obj) {
-//  if (obj.hasOwnProperty(prop)) {
-//    console.log(`obj.${prop} = ${obj[prop]}`);
-//  } 
-//}
 
-// Output:
-// "obj.color = red"
 var person = function () {
     for (var {name: n, characteristics: {Age: a, Location: l}} of people){
-        return ('name: ' + n + { 'Age: ' + (a + 5) + 'Location: ' + l });
+        return ('name :'  + n + '{' + 'Age : ' + (parseFloat(a) + 5) + 'Location : ' + l + '}');
     }
 };
 
