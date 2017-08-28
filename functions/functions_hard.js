@@ -5,10 +5,21 @@
 //• Write a function that will make these tests succeed.
 
 
+//var person = function () {
+//    for (var {name: n, characteristics: {Age: a, Location: l}} of people){
+//        return ('name :'  + n + '{' + 'Age : ' + ((parseFloat(a) + 5)).toString + 'Location : ' + l + '}');
+//    }
+//};
+
 var person = function () {
-    for (var {name: n, characteristics: {Age: a, Location: l}} of people){
-        return ('name :'  + n + '{' + 'Age : ' + (parseFloat(a) + 5) + 'Location : ' + l + '}');
+    for (let i in people.name.Age){
+        return ((parseFloat(name.Age) + 5)).toString;
     }
 };
+
+
+//var person = people.characteristics.age.map(function(num) {
+//  return num + 5;
+//});
 
 module.exports.person = person;

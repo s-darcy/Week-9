@@ -8,23 +8,23 @@
 
 var expect = require('chai').expect;
 
-describe("single person's age modified correctly", function(){ 
+describe("person with a string age property and a string location property", function(){ 
     var person = require('../functions/functions_hard.js');
     
-    var people = [
-        { 
-        name : 'Chris',
-        characteristics : {
+    
+    
+    var people = {
+        Chris : {
             Age: '26',
             Location: 'Charlotte'
-            }
         },
-        {   
-        name : 'Jonathan', 
-        characteristics : {
+        Jonathan : {
             Age: '32',
             Location: 'Atlanta'
-            }
         }
-    ];
+    };
+    
+    it("returns person's age modified correctly", function(){
+        expect(people.Chris.Age).to.be.equal(31);
+    });
 });
