@@ -23,16 +23,10 @@
 
 // Output:
 // "obj.color = red"
-
-for (var {name: n, characteristics : {Age : a, Location : l}} of people){
-    return ('name: ' + n + { 'Age: ' + (a + 5) + 'Location: ' + l });
-}
-
-
-
-var person = {
-    Age : 'string' + 5,
-    Location: 'place'
+var person = function () {
+    for (var {name: n, characteristics: {Age: a, Location: l}} of people){
+        return ('name: ' + n + { 'Age: ' + (a + 5) + 'Location: ' + l });
+    }
 };
 
 module.exports.person = person;

@@ -36,14 +36,16 @@ describe("single person's age modified correctly", function(){
         { 
         name : 'Chris',
         characteristics : {
-            Age: ’26’,
-            Location: ‘Charlotte'
+            Age: '26',
+            Location: 'Charlotte'
+            }
         },
+        {   
         name : 'Jonathan', 
         characteristics : {
-                Age: ’32’,
-                Location: ‘Atlanta’
-        },
+            Age: '32',
+            Location: 'Atlanta'
+            }
+        }
     ];
-    
 });
