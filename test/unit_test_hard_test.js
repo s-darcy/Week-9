@@ -57,7 +57,7 @@ describe("person with age property and location property", function(){
     
     var invalidParameter = {
         Oops : {
-            Age : '',
+            Age : undefined,
             Location: 'San Francisco'
         }
     };
