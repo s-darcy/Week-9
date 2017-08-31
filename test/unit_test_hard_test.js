@@ -57,7 +57,7 @@ describe("person with age property and location property", function(){
     
     var invalidParameter = {
         Oops : {
-            Age : 23,
+            Age : '',
             Location: 'San Francisco'
         }
     };
@@ -66,6 +66,6 @@ describe("person with age property and location property", function(){
         expect(addFive(before)).to.deep.equal(expected);
     });
     it("returns false due to invalid parameter", function(){
-        expect(addFive(invalidParameter.Oops.Age)).to.be.false;
+        expect(addFive(invalidParameter)).to.be.false;
     });
 });
