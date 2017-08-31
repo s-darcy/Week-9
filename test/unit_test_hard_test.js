@@ -4,16 +4,12 @@
 //• Write a test that will verify that the function returns false if an invalid parameter is passed in.
 //• Write a function that will make these tests succeed.
 
-
-
 var expect = require('chai').expect;
 
-describe("person with a string age property and a string location property", function(){ 
-    var person = require('../functions/functions_hard.js');
+describe("person with age property and location property", function(){ 
+    var addFive = require('../functions/functions_hard.js');
     
-    
-    
-    var people = {
+    var before = {
         Chris : {
             Age: '26',
             Location: 'Charlotte'
@@ -21,10 +17,48 @@ describe("person with a string age property and a string location property", fun
         Jonathan : {
             Age: '32',
             Location: 'Atlanta'
+        },
+        Bill : {
+            Age: '65', 
+            Location : 'New York'
+        },
+        Ron : {
+            Age: '54', 
+            Location : 'Boston'
+        },
+        Sarah : {
+            Age: '5', 
+            Location : 'Baltimore'
+        }
+    };
+    
+    var expected = {
+        Chris : {
+            Age: '31',
+            Location: 'Charlotte'
+        },
+        Jonathan : {
+            Age: '37',
+            Location: 'Atlanta'
+        },
+        Bill : {
+            Age: '70', 
+            Location : 'New York'
+        },
+        Ron : {
+            Age: '59', 
+            Location : 'Boston'
+        },
+        Sarah : {
+            Age: '10', 
+            Location : 'Baltimore'
         }
     };
     
     it("returns person's age modified correctly", function(){
-        expect(people.Chris.Age).to.be.equal(31);
+        expect(addFive(before)).to.deep.equal(expected);
     });
+//    it("returns an object with 5 people and their ages modified correctly", function(){
+//        expect(;
+//    });
 });

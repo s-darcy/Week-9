@@ -4,22 +4,19 @@
 //• Write a test that will verify that the function returns false if an invalid parameter is passed in.
 //• Write a function that will make these tests succeed.
 
+var newAge;
 
-//var person = function () {
-//    for (var {name: n, characteristics: {Age: a, Location: l}} of people){
-//        return ('name :'  + n + '{' + 'Age : ' + ((parseFloat(a) + 5)).toString + 'Location : ' + l + '}');
-//    }
-//};
-
-var person = function () {
-    for (let i in people.name.Age){
-        return ((parseFloat(name.Age) + 5)).toString;
+var addFive = function (people) {
+    for (var key in people) {
+        console.log("Person " + key + " is " + people[key].Age +"."); 
+        newAge = ((parseFloat(people[key].Age) + 5).toString());
+        people[key].Age = newAge;   
     }
+    
+    return people;
 };
 
+module.exports.addFive = addFive;
 
-//var person = people.characteristics.age.map(function(num) {
-//  return num + 5;
-//});
 
-module.exports.person = person;
+
