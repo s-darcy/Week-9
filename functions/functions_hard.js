@@ -12,7 +12,6 @@ var addFive = function (people) {
         newAge = ((parseFloat(people[key].Age) + 5).toString());
         people[key].Age = newAge;   
     }
-    
     return people;
 };
 

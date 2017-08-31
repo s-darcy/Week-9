@@ -7,7 +7,7 @@
 var expect = require('chai').expect;
 
 describe("person with age property and location property", function(){ 
-    var addFive = require('../functions/functions_hard.js');
+    var addFive = require('../functions/functions_hard.js').addFive;
     
     var before = {
         Chris : {

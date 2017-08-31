@@ -8,7 +8,7 @@
 var expect = require('chai').expect;
 
 describe('object parameter with two properties', function(){ 
-    var thing = require('../functions/functions_medium.js');
+    var thing = require('../functions/functions_medium.js').thing;
     
     var newObject = Object.create(thing);
         newObject.str = 'green';
