@@ -7,12 +7,16 @@
 var newAge;
 
 var addFive = function (people) {
-    for (var key in people) {
-        console.log("Person " + key + " is " + people[key].Age +"."); 
-        newAge = ((parseFloat(people[key].Age) + 5).toString());
-        people[key].Age = newAge;   
+    if (!typeof people[key] == 'string'){
+        return false;
+    } else {
+        for (var key in people) {
+            newAge = ((parseFloat(people[key].Age) + 5).toString());
+            people[key].Age = newAge;
+            console.log("Person " + key + " is now " + newAge +"."); 
+        }
+        return people;
     }
-    return people;
 };
 
 module.exports.addFive = addFive;

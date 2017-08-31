@@ -55,10 +55,17 @@ describe("person with age property and location property", function(){
         }
     };
     
-    it("returns person's age modified correctly", function(){
+    var invalidParameter = {
+        Oops : {
+            Age : 23,
+            Location: 'San Francisco'
+        }
+    };
+    
+    it("returns 5 people's age modified correctly", function(){
         expect(addFive(before)).to.deep.equal(expected);
     });
-//    it("returns an object with 5 people and their ages modified correctly", function(){
-//        expect(;
-//    });
+    it("returns false due to invalid parameter", function(){
+        expect(addFive(invalidParameter.Oops.Age)).to.be.false;
+    });
 });
